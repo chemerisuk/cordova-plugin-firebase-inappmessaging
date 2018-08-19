@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-firebase-inappmessaging",
+  "version": "1.0.0-0",
+  "description": "Cordova plugin for Firebase In-App Messaging",
+  "cordova": {
+    "id": "cordova-plugin-firebase-inappmessaging",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging.git"
+  },
+  "author": "Maksim Chemerisuk <chemerisuk@gmail.com> (https://github.com/chemerisuk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging/issues"
+  },
+  "homepage": "https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging#readme",
+  "keywords": [
+    "cordova",
+    "firebase",
+    "in-app messaging",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "scripts": {
+    "version": "replace -s 'version=\"(.+)(?=\">)' 'version=\"'$npm_package_version plugin.xml && git add plugin.xml",
+    "postversion": "git push && git push --tags"
+  }
+}
