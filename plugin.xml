@@ -10,7 +10,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <repo>https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging</repo>
     <issue>https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging/issues</issue>
 
-    <dependency id="cordova-plugin-firebase-analytics" version="~1.0.0"/>
+    <dependency id="cordova-plugin-firebase-analytics" version="~1.0.1"/>
 
     <engines>
         <engine name="cordova" version=">=7.1.0"/>
