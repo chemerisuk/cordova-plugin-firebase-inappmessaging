@@ -10,7 +10,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <repo>https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging</repo>
     <issue>https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging/issues</issue>
 
-    <dependency id="cordova-plugin-firebase-analytics" version="~1.0.1"/>
+    <dependency id="cordova-plugin-firebase-analytics" version="~1.1.0"/>
 
     <engines>
         <engine name="cordova" version=">=7.1.0"/>
@@ -23,7 +23,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </platform>
 
     <platform name="android">
-        <preference name="FIREBASE_INAPPMESSAGING_VERSION" default="17.0.+"/>
+        <preference name="FIREBASE_INAPPMESSAGING_VERSION" default="17.1.+"/>
 
         <framework src="com.google.firebase:firebase-inappmessaging-display:$FIREBASE_INAPPMESSAGING_VERSION" />
     </platform>
