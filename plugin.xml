@@ -15,11 +15,18 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <engines>
         <engine name="cordova" version=">=7.1.0"/>
         <engine name="cordova-android" version=">=7.0.0"/>
-        <engine name="cordova-ios" version=">=4.3.0"/>
+        <engine name="cordova-ios" version=">=5.0.0"/>
     </engines>
 
     <platform name="ios">
-        <framework src="Firebase/InAppMessagingDisplay" type="podspec" spec="~> 5.0"/>
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods>
+                <pod name="Firebase/InAppMessagingDisplay" spec="~> 6.0.0" />
+            </pods>
+        </podspec>
     </platform>
 
     <platform name="android">
