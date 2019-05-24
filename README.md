@@ -25,6 +25,8 @@
 
 Use variable `FIREBASE_INAPPMESSAGING_VERSION` to override dependency version on Android.
 
+Use variable `POD_FIREBASE_VERSION` to override dependency version on iOS.
+
 [npm-url]: https://www.npmjs.com/package/cordova-plugin-firebase-inappmessaging
 [npm-version]: https://img.shields.io/npm/v/cordova-plugin-firebase-inappmessaging.svg
 [npm-downloads]: https://img.shields.io/npm/dm/cordova-plugin-firebase-inappmessaging.svg
