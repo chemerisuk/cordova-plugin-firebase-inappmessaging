@@ -13,20 +13,18 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <dependency id="cordova-plugin-firebase-analytics" version="~2.0.0"/>
 
     <engines>
-        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova" version=">=9.0.0"/>
         <engine name="cordova-android" version=">=7.0.0"/>
         <engine name="cordova-ios" version=">=5.0.0"/>
     </engines>
 
     <platform name="ios">
-        <preference name="POD_FIREBASE_VERSION" default="~> 6.1.0"/>
-
         <podspec>
             <config>
                 <source url="https://github.com/CocoaPods/Specs.git"/>
             </config>
             <pods>
-                <pod name="Firebase/InAppMessagingDisplay" spec="$POD_FIREBASE_VERSION" />
+                <pod name="Firebase/InAppMessagingDisplay" spec="~> 6.1.0" />
             </pods>
         </podspec>
     </platform>
