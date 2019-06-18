@@ -24,13 +24,13 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <source url="https://github.com/CocoaPods/Specs.git"/>
             </config>
             <pods>
-                <pod name="Firebase/InAppMessagingDisplay" spec="~> 6.1.0" />
+                <pod name="Firebase/InAppMessagingDisplay" spec="~> 6.2.0" />
             </pods>
         </podspec>
     </platform>
 
     <platform name="android">
-        <preference name="FIREBASE_INAPPMESSAGING_VERSION" default="17.1.+"/>
+        <preference name="FIREBASE_INAPPMESSAGING_VERSION" default="18.0.+"/>
 
         <framework src="com.google.firebase:firebase-inappmessaging-display:$FIREBASE_INAPPMESSAGING_VERSION" />
     </platform>
