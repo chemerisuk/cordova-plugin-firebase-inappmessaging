@@ -24,7 +24,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods>
-                <pod name="Firebase/InAppMessagingDisplay" spec="~> 6.3.0" />
+                <pod name="Firebase/InAppMessaging" spec="~> 6.3.0" />
             </pods>
         </podspec>
     </platform>
