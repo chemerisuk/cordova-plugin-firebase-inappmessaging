@@ -23,9 +23,7 @@
 
     cordova plugin add cordova-plugin-firebase-inappmessaging --save
 
-Use variable `FIREBASE_INAPPMESSAGING_VERSION` to override dependency version on Android.
-
-Use variable `POD_FIREBASE_VERSION` to override dependency version on iOS.
+Use variables `IOS_FIREBASE_INAPPMESSAGING_VERSION` and `ANDROID_FIREBASE_INAPPMESSAGING_VERSION` to override dependency versions for Firebase SDKs.
 
 [npm-url]: https://www.npmjs.com/package/cordova-plugin-firebase-inappmessaging
 [npm-version]: https://img.shields.io/npm/v/cordova-plugin-firebase-inappmessaging.svg
