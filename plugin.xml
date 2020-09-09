@@ -34,7 +34,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <platform name="android">
         <preference name="ANDROID_FIREBASE_INAPPMESSAGING_VERSION" default="19.1.+"/>
 
-        <framework src="com.google.firebase:firebase-inappmessaging-display:$FIREBASE_INAPPMESSAGING_VERSION" />
+        <framework src="com.google.firebase:firebase-inappmessaging-display:$ANDROID_FIREBASE_INAPPMESSAGING_VERSION" />
     </platform>
 
 </plugin>
