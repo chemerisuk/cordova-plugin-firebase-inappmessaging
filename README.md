@@ -21,6 +21,8 @@
 - [Installation](#installation)
     - [Disabling automatic data collection](#disabling-automatic-data-collection)
     - [Adding required configuration files](#adding-required-configuration-files)
+- [Functions](#functions)
+    - [setAutomaticDataCollectionEnabled](#setautomaticdatacollectionenabled)
 
 <!-- /MarkdownTOC -->
 
@@ -47,7 +49,7 @@ In some cases, you may wish to temporarily or permanently disable collection of 
     $ cordova plugin add cordova-plugin-firebase-inappmessaging \
         --variable AUTOMATIC_DATA_COLLECTION_ENABLED=false
 
-Later you can re-enable automatic data collection (for instance after getting end-user consent) using method [setAutomaticDataCollectionEnabled](#setenabledenabled).
+Later you can re-enable automatic data collection (for instance after getting end-user consent) using method [setAutomaticDataCollectionEnabled](#setautomaticdatacollectionenabled).
 
 ### Adding required configuration files
 
@@ -67,3 +69,33 @@ Cordova supports `resource-file` tag for easy copying resources files. Firebase 
     <resource-file src="GoogleService-Info.plist" />
 </platform>
 ```
+
+This way config files will be copied on `cordova prepare` step.
+
+<!-- TypedocGenerated -->
+
+## Functions
+
+### setAutomaticDataCollectionEnabled
+
+**setAutomaticDataCollectionEnabled**(`collectionEnabled`): `Promise`<`void`\>
+
+Enables, disables, or clears automatic data collection for Firebase In-App Messaging
+
+**`Example`**
+
+```ts
+cordova.plugins.firebase.inappmessaging.setAutomaticDataCollectionEnabled(true);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `collectionEnabled` | `boolean` | Whether automatic collection is enabled |
+
+#### Returns
+
+`Promise`<`void`\>
+
+Callback when operation is completed
