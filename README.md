@@ -19,6 +19,7 @@
 
 - [Supported Platforms](#supported-platforms)
 - [Installation](#installation)
+    - [Disabling automatic data collection](#disabling-automatic-data-collection)
     - [Adding required configuration files](#adding-required-configuration-files)
 
 <!-- /MarkdownTOC -->
@@ -35,8 +36,18 @@
 Use variables `IOS_FIREBASE_POD_VERSION` and `ANDROID_FIREBASE_BOM_VERSION` to override dependency versions for Firebase SDKs:
 
     $ cordova plugin add cordova-plugin-firebase-inappmessaging \
-    --variable IOS_FIREBASE_POD_VERSION="9.3.0" \
-    --variable ANDROID_FIREBASE_BOM_VERSION="30.3.1"
+        --variable IOS_FIREBASE_POD_VERSION="9.3.0" \
+        --variable ANDROID_FIREBASE_BOM_VERSION="30.3.1"
+
+### Disabling automatic data collection
+By default, Firebase In-App Messaging automatically delivers messages to all app users you target in messaging campaigns. To deliver those messages, the Firebase In-App Messaging SDK uses Firebase installation IDs to identify each user's app. This means that In-App Messaging has to send client data, linked to the installation ID, to Firebase servers. If you'd like to give users more control over the data they send, disable automatic data collection and give them a chance to approve data sharing.
+
+In some cases, you may wish to temporarily or permanently disable collection of Analytics data. You can set the value of variable `AUTOMATIC_DATA_COLLECTION_ENABLED` to `false` to prevent collecting any user data:
+
+    $ cordova plugin add cordova-plugin-firebase-inappmessaging \
+        --variable AUTOMATIC_DATA_COLLECTION_ENABLED=false
+
+Later you can re-enable automatic data collection (for instance after getting end-user consent) using method [setAutomaticDataCollectionEnabled](#setenabledenabled).
 
 ### Adding required configuration files
 
