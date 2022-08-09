@@ -23,6 +23,7 @@
     - [Adding required configuration files](#adding-required-configuration-files)
 - [Functions](#functions)
     - [setAutomaticDataCollectionEnabled](#setautomaticdatacollectionenabled)
+    - [setMessagesSuppressed](#setmessagessuppressed)
 
 <!-- /MarkdownTOC -->
 
@@ -93,6 +94,32 @@ cordova.plugins.firebase.inappmessaging.setAutomaticDataCollectionEnabled(true);
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `collectionEnabled` | `boolean` | Whether automatic collection is enabled |
+
+#### Returns
+
+`Promise`<`void`\>
+
+Callback when operation is completed
+
+___
+
+### setMessagesSuppressed
+
+**setMessagesSuppressed**(`messagesSupressed`): `Promise`<`void`\>
+
+Enables or disables suppression of Firebase In App Messaging messages.
+
+**`Example`**
+
+```ts
+cordova.plugins.firebase.inappmessaging.setMessagesSuppressed(true);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `messagesSupressed` | `boolean` | Whether messages are suppressed |
 
 #### Returns
 

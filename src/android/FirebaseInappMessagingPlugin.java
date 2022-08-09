@@ -16,4 +16,11 @@ public class FirebaseInappMessagingPlugin extends ReflectiveCordovaPlugin {
         FirebaseInAppMessaging.getInstance().setAutomaticDataCollectionEnabled(collectionEnabled);
         callbackContext.success();
     }
+
+    @CordovaMethod
+    private void setMessagesSuppressed(CordovaArgs args, CallbackContext callbackContext) throws JSONException {
+        boolean messagesSuppressed = args.getBoolean(0);
+        FirebaseInAppMessaging.getInstance().setMessagesSuppressed(messagesSuppressed);
+        callbackContext.success();
+    }
 }

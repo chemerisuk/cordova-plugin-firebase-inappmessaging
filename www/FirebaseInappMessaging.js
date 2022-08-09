@@ -16,3 +16,18 @@ function(collectionEnabled) {
         exec(resolve, reject, PLUGIN_NAME, "setAutomaticDataCollectionEnabled", [collectionEnabled]);
     });
 };
+
+exports.setMessagesSuppressed =
+/**
+ * Enables or disables suppression of Firebase In App Messaging messages.
+ * @param {boolean} messagesSupressed Whether messages are suppressed
+ * @returns {Promise<void>} Callback when operation is completed
+ *
+ * @example
+ * cordova.plugins.firebase.inappmessaging.setMessagesSuppressed(true);
+ */
+function(messagesSupressed) {
+    return new Promise(function(resolve, reject) {
+        exec(resolve, reject, PLUGIN_NAME, "setMessagesSuppressed", [messagesSupressed]);
+    });
+};
