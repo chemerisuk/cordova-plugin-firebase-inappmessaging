@@ -45,12 +45,12 @@ Use variables `IOS_FIREBASE_POD_VERSION` and `ANDROID_FIREBASE_BOM_VERSION` to o
 ### Disabling automatic data collection
 By default, Firebase In-App Messaging automatically delivers messages to all app users you target in messaging campaigns. To deliver those messages, the Firebase In-App Messaging SDK uses Firebase installation IDs to identify each user's app. This means that In-App Messaging has to send client data, linked to the installation ID, to Firebase servers. If you'd like to give users more control over the data they send, disable automatic data collection and give them a chance to approve data sharing.
 
-In some cases, you may wish to temporarily or permanently disable collection of Analytics data. You can set the value of variable `AUTOMATIC_DATA_COLLECTION_ENABLED` to `false` to prevent collecting any user data:
+Set variable `AUTOMATIC_DATA_COLLECTION_ENABLED` to `false` to prevent collecting any user data:
 
     $ cordova plugin add cordova-plugin-firebase-inappmessaging \
         --variable AUTOMATIC_DATA_COLLECTION_ENABLED=false
 
-Later you can re-enable automatic data collection (for instance after getting end-user consent) using method [setAutomaticDataCollectionEnabled](#setautomaticdatacollectionenabled).
+Later you can re-enable automatic data collection (for instance after getting end-user consent) using method [setAutomaticDataCollectionEnabled](#setautomaticdatacollectionenabled). Once you set a data collection preference manually, the value persists through app restarts, overriding the value in your `AndroidManifest.xml`. If you'd like to disable initialization again, for example if a user opts out of collection later, pass `false` to the `setAutomaticDataCollectionEnabled` method.
 
 ### Adding required configuration files
 
