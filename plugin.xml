@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
            id="cordova-plugin-firebase-inappmessaging"
-      version="5.0.0">
+      version="6.0.0">
 
     <name>cordova-plugin-firebase-inappmessaging</name>
     <description>Cordova plugin for Firebase In-App Messaging</description>
@@ -10,31 +10,32 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <repo>https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging</repo>
     <issue>https://github.com/chemerisuk/cordova-plugin-firebase-inappmessaging/issues</issue>
 
-    <dependency id="cordova-plugin-firebase-analytics" version="~6.1.0"/>
+    <dependency id="cordova-plugin-firebase-analytics" version="^7.0.0"/>
 
     <engines>
         <engine name="cordova" version=">=10.0.0"/>
-        <engine name="cordova-android" version=">=9.0.0"/>
+        <engine name="cordova-android" version=">=11.0.0"/>
         <engine name="cordova-ios" version=">=6.0.0"/>
     </engines>
 
     <platform name="ios">
-        <preference name="IOS_FIREBASE_INAPPMESSAGING_VERSION" default="~> 8.2.0"/>
+        <preference name="IOS_FIREBASE_POD_VERSION" default="9.3.0" />
 
         <podspec>
             <config>
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
-            <pods>
+            <pods use-frameworks="true">
                 <pod name="Firebase/InAppMessaging" spec="$IOS_FIREBASE_INAPPMESSAGING_VERSION" />
             </pods>
         </podspec>
     </platform>
 
     <platform name="android">
-        <preference name="ANDROID_FIREBASE_INAPPMESSAGING_VERSION" default="20.0.+"/>
+        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="30.3.1" />
 
-        <framework src="com.google.firebase:firebase-inappmessaging-display:$ANDROID_FIREBASE_INAPPMESSAGING_VERSION" />
+        <framework src="platform('com.google.firebase:firebase-bom:$ANDROID_FIREBASE_BOM_VERSION')" />
+        <framework src="com.google.firebase:firebase-inappmessaging-display" />
     </platform>
 
 </plugin>
