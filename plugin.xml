@@ -43,7 +43,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="Firebase/InAppMessaging" spec="$IOS_FIREBASE_INAPPMESSAGING_VERSION" />
+                <pod name="Firebase/InAppMessaging" spec="$IOS_FIREBASE_POD_VERSION" />
             </pods>
         </podspec>
 
