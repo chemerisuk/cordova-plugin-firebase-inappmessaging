@@ -16,7 +16,7 @@ let package = Package(
             name: "FirebaseInappMessagingPlugin",
             dependencies: [
                 .product(name: "Cordova", package: "cordova-ios"),
-                .product(name: "FirebaseInAppMessaging", package: "firebase-ios-sdk")
+                .product(name: "FirebaseInAppMessaging-Beta", package: "firebase-ios-sdk")
             ],
             path: "src/ios",
             resources: [],
