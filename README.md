@@ -36,11 +36,11 @@
 
     cordova plugin add cordova-plugin-firebase-inappmessaging
 
-Use variables `IOS_FIREBASE_POD_VERSION` and `ANDROID_FIREBASE_BOM_VERSION` to override dependency versions for Firebase SDKs:
+Use variables `IOS_FIREBASE_SDK_VERSION` and `ANDROID_FIREBASE_BOM_VERSION` to override dependency versions for Firebase SDKs:
 
     $ cordova plugin add cordova-plugin-firebase-inappmessaging \
-        --variable IOS_FIREBASE_POD_VERSION="9.3.0" \
-        --variable ANDROID_FIREBASE_BOM_VERSION="30.3.1"
+        --variable IOS_FIREBASE_SDK_VERSION="12.19.1" \
+        --variable ANDROID_FIREBASE_BOM_VERSION="34.19.0"
 
 ### Disabling automatic data collection
 By default, Firebase In-App Messaging automatically delivers messages to all app users you target in messaging campaigns. To deliver those messages, the Firebase In-App Messaging SDK uses Firebase installation IDs to identify each user's app. This means that In-App Messaging has to send client data, linked to the installation ID, to Firebase servers. If you'd like to give users more control over the data they send, disable automatic data collection and give them a chance to approve data sharing.
